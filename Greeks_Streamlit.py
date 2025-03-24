@@ -60,6 +60,16 @@ based on various input parameters like stock price, strike price, time to expira
 interest rate, volatility, and dividend yield.
 """)
 
+# Sidebar with creator information
+st.sidebar.markdown("""
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="20" height="20">
+    <span style="margin-left: 10px;">Created by: 
+        <a href="https://www.linkedin.com/in/kilian-voillaume-880a9217a/" target="_blank">Kilian Voillaume</a>
+    </span>
+</div>
+""", unsafe_allow_html=True)
+
 # Sidebar inputs
 st.sidebar.header("Input Parameters")
 
