@@ -67,11 +67,11 @@ st.sidebar.header("Input Parameters")
 # ---- SIDEBAR CREDITS ----
 st.sidebar.markdown(
     """
-    <div style='margin-bottom: 10px;'>
-        <span style='font-weight: bold;'>Created by:</span><br>
-        <a href='https://www.linkedin.com/in/kilian-voillaume-880a9217a/' target='_blank' style='text-decoration: none; display: flex; align-items: center; gap: 5px;'>
-            <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' width='16' height='16'/>
-            <span style='color: #0A66C2;'>Kilian Voillaume</span>
+    <div style='margin-bottom: 20px;'>
+        <span style='font-weight: bold; font-size: 16px;'>Created by:</span><br>
+        <a href='https://www.linkedin.com/in/kilian-voillaume-880a9217a/' target='_blank' style='text-decoration: none; display: flex; align-items: center; gap: 10px; margin-top: 5px;'>
+            <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' width='24' height='24'/>
+            <span style='color: #0A66C2; font-size: 16px; font-weight: bold;'>Kilian Voillaume</span>
         </a>
     </div>
     """,
