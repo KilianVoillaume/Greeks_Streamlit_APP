@@ -63,6 +63,21 @@ interest rate, volatility, and dividend yield.
 
 
 st.sidebar.header("Input Parameters")
+
+# ---- SIDEBAR CREDITS ----
+st.sidebar.markdown(
+    """
+    <div style='margin-bottom: 10px;'>
+        <span style='font-weight: bold;'>Created by:</span><br>
+        <a href='https://www.linkedin.com/in/kilian-voillaume-880a9217a/' target='_blank' style='text-decoration: none; display: flex; align-items: center; gap: 5px;'>
+            <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' width='16' height='16'/>
+            <span style='color: #0A66C2;'>Kilian Voillaume</span>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 option_type = st.sidebar.selectbox("Option Type", ["Call", "Put"])
 
 # ------ DEFAULT VALUES ------
