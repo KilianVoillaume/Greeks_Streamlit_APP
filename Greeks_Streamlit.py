@@ -6,6 +6,7 @@ import scipy.stats as stats
 
 st.set_page_config(page_title="Options Greeks Visualizer", layout="wide")
 
+# ------ BLACK SCHOLES FUNCTION ------
 def calculate_d1(S, K, T, r, sigma, q):
     return (np.log(S/K) + (r - q + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
 
@@ -52,7 +53,7 @@ def black_scholes_price(option_type, S, K, T, r, sigma, q):
     
     return price
 
-# App title and description
+# ------ STREAMLIT APP ------
 st.title("Options Greeks Visualizer")
 st.markdown("""
 This app visualizes how option Greeks (Delta, Gamma, Theta, Vega, and Rho) change 
@@ -60,22 +61,11 @@ based on various input parameters like stock price, strike price, time to expira
 interest rate, volatility, and dividend yield.
 """)
 
-# Sidebar with creator information
-st.sidebar.markdown("""
-<div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="20" height="20">
-    <span style="margin-left: 10px;">Created by: 
-        <a href="https://www.linkedin.com/in/kilian-voillaume-880a9217a/" target="_blank">Kilian Voillaume</a>
-    </span>
-</div>
-""", unsafe_allow_html=True)
 
-# Sidebar inputs
 st.sidebar.header("Input Parameters")
-
 option_type = st.sidebar.selectbox("Option Type", ["Call", "Put"])
 
-# Default parameters
+# ------ DEFAULT VALUES ------
 S_default = 100.0
 K_default = 100.0
 T_default = 30/365
@@ -83,6 +73,7 @@ r_default = 0.05
 sigma_default = 0.2
 q_default = 0.02  # Default dividend yield
 
+# ------ SLIDERS FOR INPUTS ------
 S = st.sidebar.slider("Stock Price ($)", 50.0, 150.0, float(S_default), 1.0)
 K = st.sidebar.slider("Strike Price ($)", 50.0, 150.0, float(K_default), 1.0)
 T = st.sidebar.slider("Time to Expiration (Days)", 1, 365, int(T_default*365), 1) / 365
@@ -93,7 +84,7 @@ q = st.sidebar.slider("Dividend Yield (%)", 0.0, 10.0, float(q_default*100), 0.2
 current_price = black_scholes_price(option_type, S, K, T, r, sigma, q)
 current_greeks = calculate_greeks(option_type, S, K, T, r, sigma, q)
 
-# Display current values
+# ------ DISPLAY CURRENT VALUES ------
 st.header("Current Option Values")
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 col1.metric("Price", f"${current_price:.2f}")
@@ -112,6 +103,7 @@ param_to_visualize = st.selectbox(
     ["Stock Price", "Strike Price", "Time to Expiration", "Interest Rate", "Volatility", "Dividend Yield"]
 )
 
+# ------ PARAMETER RANGES ------
 if param_to_visualize == "Stock Price":
     param_range = np.linspace(50, 150, 100)
     param_values = param_range
@@ -144,6 +136,7 @@ vega_values = []
 rho_values = []
 price_values = []
 
+# ------ CALCULATE GREEKS AND PRICE FOR EACH PARAMETER VALUE ------
 for param_value in param_values:
     if param_to_visualize == "Stock Price":
         greeks = calculate_greeks(option_type, param_value, K, T, r, sigma, q)
@@ -183,6 +176,7 @@ greeks_to_show = st.multiselect(
     default=["Delta", "Gamma", "Theta"]
 )
 
+# ------ PLOTTING GREEKS ------
 if not greeks_to_show:
     st.warning("Please select at least one Greek to display.")
 else:
