@@ -69,7 +69,7 @@ st.sidebar.markdown(
     """
     <div style='margin-bottom: 25px;'>
         <span style='font-weight: bold; font-size: 18px;'>Created by:</span><br>
-        <a href='https://www.linkedin.com/in/kilian-voillaume-880a9217a/' target='_blank' style='text-decoration: none; display: flex; align-items: center; gap: 12px; margin-top: 8px;'>
+        <a href='https://www.linkedin.com/in/kilian-voillaume/' target='_blank' style='text-decoration: none; display: flex; align-items: center; gap: 12px; margin-top: 8px;'>
             <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' width='32' height='32'/>
             <span style='color: #0A66C2; font-size: 18px; font-weight: bold;'>Kilian Voillaume</span>
         </a>
