@@ -1,11 +1,24 @@
-# Greeks_Streamlit_APP
-Display the impact of input parameters on the Greeks
+# Options Greeks Visualizer
 
-Run the following lines of code in your prompt to install the mandatory packages:
-```
-pip install -r Requirements_greeks_streamlit.txt
-```
-# About the app
-Options Greeks Visualizer is an interactive tool built with Streamlit that helps users explore how the key option Greeks—Delta, Gamma, Theta, Vega, and Rho—change in response to changes in market parameters. 
-Whether you're analyzing the impact of volatility, interest rates, time to expiration, or dividends, this app offers real-time visual insights based on the Black-Scholes model. 
-It is ideal for students, traders, or financial analysts, it combines intuitive sliders, dynamic plots, and clear explanations to deepen your understanding of options behavior under various scenarios
+An interactive Streamlit app to explore how option Greeks behave under the Black-Scholes model.
+
+---
+
+## Overview
+
+This project is a hands-on visualisation tool for understanding option sensitivities — also known as the Greeks (Delta, Gamma, Theta, Vega, Rho) — in the context of the Black-Scholes-Merton framework. Built with Streamlit and Matplotlib, it enables users to adjust key inputs such as stock price, strike, volatility, interest rate, dividend yield, and time to maturity, and immediately observe the resulting changes in price and sensitivities.
+
+This tool is intended for students, quants, risk managers, and anyone interested in how theoretical models map to intuitive market behaviours. The emphasis is on clarity, interaction, and insight.
+
+---
+
+## Features
+
+- 📈 **Live Calculation of Greeks**: Visualise how each Greek changes in response to key market inputs.
+- 🧠 **Theoretical Grounding**: Built entirely on the Black-Scholes-Merton model with dividend adjustments.
+- 🔍 **Interactive Sliders**: Adjust stock price, strike price, volatility, interest rate, dividend yield, and time to expiration in real time.
+- 🛠️ **Parameter Sensitivity Plots**: Choose any one input (e.g., volatility or time to expiry) and graph its effect on each Greek.
+- 🎓 **In-App Explanation**: Intuitive, plain-language definitions of each Greek, contextualised with practical examples.
+
+---
+
