@@ -25,29 +25,6 @@ The Options Greeks Visualizer is a dynamic tool designed to help traders, analys
 - **Multi-dimensional Visualization**: See how each Greek changes across the range of any selected parameter
 - **Educational Descriptions**: Clear explanations of each Greek and its financial significance
 
-## 🚀 How to Use
-
-1. **Installation**:
-   ```bash
-   # Clone the repository
-   git clone https://github.com/yourusername/options-greeks-visualizer.git
-   cd options-greeks-visualizer
-   
-   # Install dependencies
-   pip install -r requirements.txt
-   ```
-
-2. **Run the application**:
-   ```bash
-   streamlit run app.py
-   ```
-
-3. **Using the interface**:
-   - Adjust input parameters using the sliders in the sidebar
-   - Select which parameter to visualize against (e.g., stock price, volatility)
-   - Choose which Greeks to display in the charts
-   - Observe how the Greeks and option price change across different parameter values
-
 ## 📊 Data Sources
 
 The application does not rely on external data sources. All calculations are performed in real-time using the Black-Scholes option pricing model with the following mathematical formulations:
